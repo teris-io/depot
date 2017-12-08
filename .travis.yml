@@ -10,8 +10,9 @@ before_install:
 
 script:
   - touch cov-root && go test -coverprofile=cov-root -covermode=atomic github.com/teris-io/depot
+  - touch cov-config && go test -coverprofile=cov-config -covermode=atomic github.com/teris-io/depot/config
 
 after_success:
-  - cat cov-root > coverage.txt
+  - cat cov-root cov-config > coverage.txt
   - codecov
 

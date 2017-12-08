@@ -1,10 +1,12 @@
 package main
 
 import (
+	"os"
+
 	"github.com/teris-io/cli"
+	"github.com/teris-io/depot/server"
 	"github.com/teris-io/log"
 	"github.com/teris-io/log/std"
-	"os"
 )
 
 func init() {
@@ -12,15 +14,8 @@ func init() {
 }
 
 func main() {
-	start := cli.NewCommand("start", "start the depot server").
-		WithAction(func(args []string, options map[string]string) int {
-			log.Level(log.InfoLevel).Log("test")
-			// FIXME
-			return 0
-		})
-
 	app := cli.New("depot server").
-		WithCommand(start)
+		WithCommand(cli.NewCommand("server", "starts the depot server").WithAction(server.Start))
 
 	os.Exit(app.Run(os.Args, os.Stdout))
 }
