@@ -1,0 +1,17 @@
+language: go
+
+go:
+  - 1.x
+
+before_install:
+  - go get
+  - pip install --user codecov
+  - touch coverage.txt
+
+script:
+  - touch cov-root && go test -coverprofile=cov-root -covermode=atomic github.com/teris-io/depot
+
+after_success:
+  - cat cov-root > coverage.txt
+  - codecov
+
