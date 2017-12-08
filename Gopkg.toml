@@ -1,0 +1,23 @@
+[[constraint]]
+  name = "github.com/julienschmidt/httprouter"
+  revision = "e1b9828bc9e5904baec057a154c09ca40fe7fae0"
+
+[[constraint]]
+  name = "github.com/ghodss/yaml"
+  version = "1.0.0"
+
+[[constraint]]
+  name = "github.com/teris-io/cli"
+  version = "0.1.0"
+
+[[constraint]]
+  name = "github.com/teris-io/log"
+  version = "1.0.0"
+
+[[constraint]]
+  name = "github.com/pkg/errors"
+  version = "0.8.0"
+
+[[constraint]]
+  name = "github.com/stretchr/testify"
+  version = "1.1.4"
