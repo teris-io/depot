@@ -1,6 +1,6 @@
 .idea/
 *.iml
-.gradle/
+data/
 vendor/
 depot
 Gopkg.lock
